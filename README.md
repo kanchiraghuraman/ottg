@@ -47,7 +47,27 @@ code .
 # Setup python virtual environment
 
 Ensure you are in the correct folder/directory.
+Create Virtual Environment with name **venv**
 ```
 python -m venv venv
+```
+Activate Virtual Environment
+```
+.\venv\Scripts\Activate.ps1
+```
+Note: if you see error text in red with message like Unauthorized access. You will have to follow this additional steps to allow running powershell scripts.
+
+Error Message: .\venv\Scripts\Activate.ps1 : File C:\src\learning\202208\venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+
+```
+<!-- Get-ExecutionPolicy -->
+<!-- Get-ExecutionPolicy -List -->
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Deactivate Virtual Environment
+```
+<!-- .\venv\Scripts\deactivate.bat -->
+deactivate
 
 ```
