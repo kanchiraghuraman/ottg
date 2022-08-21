@@ -71,3 +71,63 @@ Deactivate Virtual Environment
 deactivate
 
 ```
+
+#Setup Python for Testing
+
+In python virtual environment
+
+```
+python -m pip install --upgrade pip
+pip install django
+pip install selenium
+pip install webdriver-manager
+pip install chromedriver-binary
+```
+
+# EXAMPLE Test File
+
+Reference: https://pypi.org/project/webdriver-manager/
+
+Create a test file example4chrome01.py
+
+```
+# selenium 4 - Chrome
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+driver4ChromeBrowser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
+driver4ChromeBrowser.get('http://www.google.com')
+time.sleep(15) #seconds
+
+assert 'Google' in driver4ChromeBrowser.title
+
+driver4ChromeBrowser.close()
+
+```
+
+To run this file in venv terminal
+```
+python example4chrome01.py
+```
+
+# EXAMPLE Test File for EDGE example4edge01.py
+
+```
+# selenium 4
+import time
+from selenium import webdriver
+from selenium.webdriver.edge.service import Service as EdgeService
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+
+driver4EdgeBrowser = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
+driver4EdgeBrowser.get('https://microsoft.com')
+
+time.sleep(15) #seconds
+
+assert 'Microsoft' in driver4EdgeBrowser.title
+
+driver4EdgeBrowser.close()
+
+```
