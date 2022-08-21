@@ -22,7 +22,7 @@ git commit -am "Some context message"
 
 Send changes to repository
 ```
-git push --set-origin users/ini/20220821_prerequisites
+git push --set-upstream origin users/ini/20220821_prerequisites
 ```
 
 
