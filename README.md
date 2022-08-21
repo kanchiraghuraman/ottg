@@ -1,6 +1,32 @@
 # Obey The Testing Goat - 21st August 2022
 
 
+# Lesson 001
+How to setup and run django project ?
+
+First create a fresh branch
+```
+git checkout -b users/krk/20220821_create_django_project
+```
+
+In the virtual environment run the following command to create a new project with the name Calculator. Note the DOT at the end to create it in the current folder
+
+```
+django-admin startproject calculator .
+
+```
+
+Run the server in a separate terminal window.
+
+Note by default the new terminal will open the virtual environment. If not please go ahead and activate the virtual env before running the following command to start the calculator project.
+
+```
+python manage.py runserver
+```
+Open any browser and visit http://localhost:8000 to find a default django project running.
+
+Note: 127.0.0.1 and localhost are the same. Its your local machine.
+
 # Branch first.. Basic Git commands
 
 How to Clone? (get a fresh repository in local box)
